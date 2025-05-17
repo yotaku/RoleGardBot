@@ -2,11 +2,11 @@
   "name": "role-guard-bot",
   "version": "1.0.0",
   "description": "Discord bot that restricts messages in a channel unless the sender has a specific role.",
-  "main": "bot.js",          // ← ここはエントリーファイル名
-  "type": "module",          // ES Modules (`import ...`) を使うので必須
+  "main": "bot.js",         
+  "type": "module",          
   "scripts": {
-    "start": "node bot.js",  // Render の Start Command もこれ
-    "dev": "nodemon bot.js"  // ローカル開発用（変更を自動再起動）
+    "start": "node bot.js",  
+    "dev": "nodemon bot.js"  
   },
   "engines": {
     "node": ">=18"
