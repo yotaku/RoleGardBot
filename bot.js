@@ -1,3 +1,27 @@
+// ---- 既存 bot.js の先頭付近に追記 ----
+const LOG_CH = 'https://discord.com/channels/1296438818379005974/1296459562299424788';
+
+function logToDiscord(msg) {
+  const ch = client.channels.cache.get(LOG_CH);
+  if (ch?.isTextBased()) ch.send('```fix\n' + msg.slice(0,1900) + '\n```');
+}
+
+process.on('unhandledRejection', err => {
+  console.error(err);
+  logToDiscord('UnhandledRejection:\n' + err.stack);
+});
+
+process.on('uncaughtException', err => {
+  console.error(err);
+  logToDiscord('UncaughtException:\n' + err.stack);
+});
+
+// 24時間ごとに強制再起動（任意）
+setInterval(() => {
+  logToDiscord('💤 Daily restart for health check');
+  process.exit(0);
+}, 24 * 60 * 60 * 1000);
+
 import { Client, GatewayIntentBits, Partials, REST, Routes, Events, SlashCommandBuilder } from 'discord.js';
 import 'dotenv/config';
 
