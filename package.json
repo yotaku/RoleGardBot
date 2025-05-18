@@ -2,11 +2,11 @@
   "name": "role-guard-bot",
   "version": "1.0.0",
   "description": "Discord bot that restricts messages in a channel unless the sender has a specific role.",
-  "main": "bot.js",         
-  "type": "module",          
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node bot.js",  
-    "dev": "nodemon bot.js"  
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "engines": {
     "node": ">=18"
