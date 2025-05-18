@@ -1,4 +1,4 @@
-const LOG_CH = 'ログ通知チャンネルID';
+const LOG_CH = '1373520267023876096';
 
 function logToDiscord(msg) {
   const ch = client.channels.cache.get(LOG_CH);
