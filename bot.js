@@ -23,6 +23,14 @@ setInterval(() => {
 
 import { Client, GatewayIntentBits, Partials, REST, Routes, Events, SlashCommandBuilder } from 'discord.js';
 import 'dotenv/config';
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Bot is alive!');
+});
+
+app.listen(process.env.PORT || 3000);
 
 // Bot クライアント初期化
 const client = new Client({
