@@ -1,5 +1,4 @@
-// ---- 既存 bot.js の先頭付近に追記 ----
-const LOG_CH = 'https://discord.com/channels/1296438818379005974/1296459562299424788';
+const LOG_CH = 'ログ通知チャンネルID';
 
 function logToDiscord(msg) {
   const ch = client.channels.cache.get(LOG_CH);
